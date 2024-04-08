@@ -8,6 +8,10 @@ Currently has no real purpose, other than making a nice language.
 
 The speakers of this language primarily reside in non-snowy tundra and forest areas, overshadowed by large mountains and leading out into large plains and cold savannahs.
 
+Their main source of food is small-medium game animals, small poultry, and limited fruit and veg, primarily in the form of berries and roots.
+
+They often keep either [cervine](https://en.wiktionary.org/wiki/cervine)- or canine-like animals that live in the surrounding areas at pets. Occasionally, someone will take a bird as a pet, but usually nothing more flamboyant than that.
+
 ## License
 
 The license for this project is the GNU General Public License, Version 3.0.
