@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <title>Haguxine</title>
+
+    <style>
+      .new-word {
+        font-style: oblique;
+        font-weight: 425;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="col-3"></div>
+    <div id="page" class="col-6">
+      <h1 id="title">Haguxine</h1>
+      <div id="contents">
+        <p><span class="new-word" pronunciation="hagɯʃɪnɛ">Haguxine</span> is my made up (or constructed) language, also known as a "conlang".</p>
+        <p>It currently has no real purpose, other than making a nice language.</p>
+      </div>
+    </div>
+    <div class="col-3"></div>
+  </body>
+  <script>
+    const newWords = document.querySelectorAll(".new-word");
+
+    newWords.forEach(w => {
+      if (w.attributes.hasOwnProperty("pronunciation")) window.getComputedStyle(w, "::after").content = w.attributes.pronunciation;
+    });
+  </script>
+</html>
