@@ -1,37 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    
-    <title>Haguxine</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-  	  body {
-  	    font-family: "Open sans", "Segoe UI", Aptos, Arial, "Helvetica Neue", sans-serif;
-  	  }
-	
-      .new-word {
-        font-style: oblique;
-        font-weight: 425;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="col-3"></div>
-    <div id="page" class="col-6">
-      <h1 id="title">Haguxine</h1>
-      <div id="contents">
-        <p><span class="new-word" pronunciation="hagɯʃɪnɛ">Haguxine</span> is my made up (or constructed) language, also known as a "conlang".</p>
-        <p>It currently has no real purpose, other than making a nice language.</p>
-      </div>
-    </div>
-    <div class="col-3"></div>
-  </body>
-  <script>
-    const newWords = document.querySelectorAll(".new-word");
+        <title>Haguxine</title>
 
-    newWords.forEach(w => {
-      if (w.attributes.hasOwnProperty("pronunciation")) w.innerHTML += ` (${w.attributes.pronunciation.textContent})`;
-    });
-  </script>
+        <!-- Responsive Styles from external source -->
+        <link
+            rel="stylesheet"
+            href="https://frank-hudson.github.io/Web-Profile/src/responsive.css"
+        />
+
+        <style>
+            body {
+                font-family: "Open sans", "Segoe UI", Aptos, Arial,
+                    "Helvetica Neue", sans-serif;
+            }
+
+            #content {
+                padding: 0 5%;
+                text-align: justify;
+            }
+
+            #title {
+                text-align: center;
+                margin: auto;
+            }
+
+            .new-word {
+                font-style: oblique;
+                font-weight: 425;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="page" class="row finished">
+            <div class="col-3"></div>
+            <div id="main" class="col-6">
+                <h1 id="title">Haguxine</h1>
+                <div id="content">
+                    <p>
+                        <span class="new-word" pronunciation="hagɯʃɪnɛ">
+                            Haguxine
+                        </span>
+                        is my made up (or constructed) language, also known as a
+                        "conlang".
+                    </p>
+                    <p>
+                        It currently has no real purpose, other than making a
+                        nice language.
+                    </p>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </body>
+    <script>
+        const newWords = document.querySelectorAll(".new-word");
+
+        newWords.forEach((w) => {
+            if (w.attributes.hasOwnProperty("pronunciation"))
+                w.innerHTML += ` (${w.attributes.pronunciation.textContent})`;
+        });
+    </script>
 </html>
