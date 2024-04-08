@@ -6,6 +6,10 @@
     <title>Haguxine</title>
 
     <style>
+  	  body {
+  	    font-family: "Open sans", "Segoe UI", Aptos, Arial, "Helvetica Neue", sans-serif;
+  	  }
+	
       .new-word {
         font-style: oblique;
         font-weight: 425;
@@ -27,7 +31,7 @@
     const newWords = document.querySelectorAll(".new-word");
 
     newWords.forEach(w => {
-      if (w.attributes.hasOwnProperty("pronunciation")) window.getComputedStyle(w, "::after").content = w.attributes.pronunciation;
+      if (w.attributes.hasOwnProperty("pronunciation")) w.innerHTML += ` (${w.attributes.pronunciation.textContent})`;
     });
   </script>
 </html>
