@@ -30,6 +30,19 @@
                 margin-bottom: 1em;
             }
 
+            #topbar {
+                float: right;
+            }
+
+            #topbar a {
+                color: black;
+                text-decoration: none;
+            }
+
+            #topbar a:hover {
+                color: #333;
+            }
+
             #page {
                 padding-top: 50px;
             }
@@ -88,9 +101,28 @@
                 text-align: center;
             }
         </style>
+
+        <!-- Icons from Font Awesome (https://fontawesome.com/) -->
+        <script
+            src="https://kit.fontawesome.com/a6b42c51ae.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
 
     <body>
+        <div id="topbar" class="row finished">
+            <div class="col-s-12">
+                <p>
+                    <a
+                        href="https://github.com/Frank-Hudson/haguxine/"
+                        title="GitHub Repository"
+                    >
+                        <i class="fa-brands fa-github fa-2xl"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+
         <div id="page" class="row finished">
             <div class="col-m-3">
                 <ul id="outline"></ul>
