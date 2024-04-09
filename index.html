@@ -18,35 +18,59 @@
                     "Helvetica Neue", sans-serif;
             }
 
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                text-align: center;
+                margin: auto;
+                margin-top: 1.5em;
+                margin-bottom: 1em;
+            }
+
+            #page {
+                padding-top: 50px;
+            }
+
+            h1#title {
+                padding-bottom: 20px;
+            }
+
             #content {
                 padding: 0 5%;
                 text-align: justify;
-            }
-
-            #title {
-                text-align: center;
-                margin: auto;
             }
 
             .new-word {
                 font-style: oblique;
                 font-weight: 425;
             }
+
+            .translation {
+                font-style: oblique;
+                font-weight: 300;
+                margin: auto;
+                text-align: center;
+            }
         </style>
     </head>
 
     <body>
         <div id="page" class="row finished">
-            <div class="col-3"></div>
+            <div class="col-m-3">&nbsp;</div>
             <div id="main" class="col-6">
                 <h1 id="title">Haguxine</h1>
                 <div id="content">
                     <p>
-                        <span class="new-word" pronunciation="hagɯʃɪnɛ">
+                        <span class="new-word" pronunciation="hagɯʃinɛ">
                             Haguxine
                         </span>
                         is my made up (or constructed) language, also known as a
-                        "conlang".
+                        "<a href="https://en.wikipedia.org/wiki/Conlang"
+                            >conlang</a
+                        >".
                     </p>
                     <p>
                         It currently has no real purpose, other than making a
@@ -54,25 +78,31 @@
                     </p>
                 </div>
             </div>
-            <div class="col-3"></div>
+            <div class="col-m-3">&nbsp;</div>
         </div>
+
+        <!-- Written code -->
+        <!-- | Modules -->
+        <script type="module" src="words.js"></script>
+        <script type="module" src="sections.js"></script>
+        <!-- | Inline -->
+        <script>
+            const page = document.querySelector("#page");
+            const title = document.querySelector("#title");
+            const content = document.querySelector("#content");
+
+            const CURRENT_PAGE = window.location.href.split("haguxine/")[1];
+            console.log(`Current Page: ${CURRENT_PAGE}`);
+        </script>
+        <!-- | | `new-word`s -->
+        <script>
+            const newWords = content.querySelectorAll(".new-word");
+
+            newWords.forEach((w) => {
+                if (w.attributes.hasOwnProperty("pronunciation"))
+                    w.innerHTML += ` (${w.attributes.pronunciation.textContent})`;
+            });
+        </script>
+        <!-- / Written code -->
     </body>
-
-    <!-- Written code -->
-    <script>
-        const content = document.querySelector('#content');
-    </script>
-    <script type="module" src="words.js"></script>
-    <script>
-        const page = window.location.href.split("haguxine/")[1];
-        console.log(`Current Page: ${page}`);
-    </script>
-    <script>
-        const newWords = content.querySelectorAll(".new-word");
-
-        newWords.forEach((w) => {
-            if (w.attributes.hasOwnProperty("pronunciation"))
-                w.innerHTML += ` (${w.attributes.pronunciation.textContent})`;
-        });
-    </script>
 </html>

@@ -1,6 +1,6 @@
 # Introductiaryoatiaon
 
-This is the repository for _Haguxine_ (hagɯʃɪnɛ); my made up (or constructed) language, also known as a "[conlang](https://en.wikipedia.org/wiki/Conlang)".
+This is the repository for _Haguxine_ (hagɯʃinɛ); my made up (or constructed) language, also known as a "[conlang](https://en.wikipedia.org/wiki/Conlang)".
 
 Currently has no real purpose, other than making a nice language.
 
