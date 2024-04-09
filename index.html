@@ -35,11 +35,29 @@
             }
 
             #outline {
+                width: 100%;
                 margin-top: 250px;
             }
 
             #outline li {
+                float: left;
+                width: 100%;
                 margin: 10px;
+                list-style: url("/assets/Custom_Bullet_1.svg");
+            }
+
+            #outline li:hover {
+                background-color: #ffffff1a;
+            }
+
+            #outline a,
+            #outline a:visited {
+                color: #000;
+                text-decoration: none;
+            }
+
+            #outline a:hover {
+                text-decoration: underline;
             }
 
             h1#title {
@@ -71,7 +89,7 @@
                 <ul id="outline"></ul>
             </div>
             <div id="main" class="col-6">
-                <h1 id="title">Haguxine</h1>
+                <h1 id="title" onclick="window.open('/', '_self')">Haguxine</h1>
                 <div id="content">
                     <p>
                         <span class="new-word" pronunciation="hagɯʃinɛ">
