@@ -14,7 +14,7 @@
 
         <style>
             body {
-                font-family: "Open sans", "Segoe UI", Aptos, Arial,
+                font-family: Convergence, "Open sans", "Segoe UI", Aptos, Arial,
                     "Helvetica Neue", sans-serif;
             }
 
@@ -59,13 +59,16 @@
     </body>
 
     <!-- Written code -->
+    <script>
+        const content = document.querySelector('#content');
+    </script>
     <script type="module" src="words.js"></script>
     <script>
         const page = window.location.href.split("haguxine/")[1];
         console.log(`Current Page: ${page}`);
     </script>
     <script>
-        const newWords = document.querySelectorAll(".new-word");
+        const newWords = content.querySelectorAll(".new-word");
 
         newWords.forEach((w) => {
             if (w.attributes.hasOwnProperty("pronunciation"))
