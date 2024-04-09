@@ -123,6 +123,44 @@
             #bottombar a:hover {
                 text-decoration: underline;
             }
+
+            #popup {
+                color: #fefff7e9;
+                background-color: #0f539bd8;
+                border-radius: 4px;
+                width: 300px;
+                padding: 10px;
+                margin: auto;
+                bottom: 15px;
+                left: 10px;
+                position: absolute;
+                visibility: hidden;
+                z-index: 1;
+            }
+
+            #popup.shown {
+                visibility: visible;
+                -webkit-animation: fadeIn 1s;
+                animation: fadeIn 1s;
+            }
+
+            @-webkit-keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
         </style>
 
         <!-- Icons from Font Awesome (https://fontawesome.com/) -->
@@ -146,11 +184,7 @@
                 </p>
 
                 <p>
-                    <a
-                        onclick="await navigator.clipboard.writeText('https://frank-hudson.github.io/haguxine/'); window.alert('Link copied');"
-                        title="Share (copy link)"
-                        id="topbar-share"
-                    >
+                    <a title="Share (copy link)" id="topbar-share">
                         <i class="fa-solid fa-share-nodes fa-2xl"></i>
                     </a>
                 </p>
@@ -204,22 +238,32 @@
             </div>
         </div>
 
+        <div id="popup" class="popup"></div>
+
         <!-- Written code -->
         <!-- | Modules -->
         <script type="module" src="words.js"></script>
         <script type="module" src="sections.js"></script>
+        <script type="module" src="events.js"></script>
         <!-- | Inline -->
         <script>
+            const topbar = document.querySelector("#topbar");
             const page = document.querySelector("#page");
             const outline = document.querySelector("#outline");
             const title = document.querySelector("#title");
             const content = document.querySelector("#content");
+            const bottombar = document.querySelector("#bottombar");
+            const popup = document.querySelector("#popup");
+
+            const topbarShare = topbar.querySelector("#topbar-share");
+            const topbarGithubRepo = topbar.querySelector(
+                "#topbar-github-repo"
+            );
 
             const CURRENT_PAGE = window.location.href.split("haguxine/")[1];
             console.log(`Current Page: ${CURRENT_PAGE}`);
 
             const newWords = content.querySelectorAll(".new-word");
-
             newWords.forEach((w) => {
                 if (w.attributes.hasOwnProperty("pronunciation"))
                     w.innerHTML += ` (${w.attributes.pronunciation.textContent})`;
