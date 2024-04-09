@@ -31,16 +31,23 @@
             }
 
             #topbar {
-                float: right;
+                overflow: hidden;
             }
 
-            #topbar a {
+            #topbar p {
+                float: right;
+                padding: 5px;
+                cursor: pointer;
+            }
+
+            #topbar p a {
                 color: black;
                 text-decoration: none;
+                display: block;
             }
 
-            #topbar a:hover {
-                color: #333;
+            #topbar p a:hover {
+                color: #555;
             }
 
             #page {
@@ -132,8 +139,19 @@
                     <a
                         href="https://github.com/Frank-Hudson/haguxine/"
                         title="GitHub Repository"
+                        id="topbar-github-repo"
                     >
                         <i class="fa-brands fa-github fa-2xl"></i>
+                    </a>
+                </p>
+
+                <p>
+                    <a
+                        onclick="await navigator.clipboard.writeText('https://frank-hudson.github.io/haguxine/'); window.alert('Link copied');"
+                        title="Share (copy link)"
+                        id="topbar-share"
+                    >
+                        <i class="fa-solid fa-share-nodes fa-2xl"></i>
                     </a>
                 </p>
             </div>
