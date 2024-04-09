@@ -7,8 +7,8 @@ import { HAGUXINE_TO_ENGLISH, Word } from "./words.js";
 //     `<a ${id ? `id="${id}"` : ""} href="${href}">${content}</a>`;
 
 const webSection = function (title, content, level = 2) {
-    return `<div id="${title.split("<em")[0].replace('"', "")}" class="section">
-                    <h${level}>${title}</h${level}>
+    return `<div class="section">
+                    <h${level} id="${title.split("<em")[0].replace('"', "").trim()}">${title}</h${level}>
                     <div>${content}</div>
                 </div>`;
 };
