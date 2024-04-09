@@ -13,6 +13,13 @@ const webSection = function (title, content, level = 2) {
                 </div>`;
 };
 
+outline.innerHTML += Array.from(HAGUXINE_TO_ENGLISH)
+    .map(
+        ([haguxine]) =>
+            `<li><a href="#${haguxine.word}">${haguxine.word}</a></li>`
+    )
+    .join("\n");
+
 content.innerHTML += webSection(
     "Words",
     Array.from(HAGUXINE_TO_ENGLISH)
