@@ -58,6 +58,12 @@
         </div>
     </body>
 
+    <!-- Written code -->
+    <script type="module" src="words.js"></script>
+    <script>
+        const page = window.location.href.split("haguxine/")[1];
+        console.log(`Current Page: ${page}`);
+    </script>
     <script>
         const newWords = document.querySelectorAll(".new-word");
 
@@ -66,5 +72,4 @@
                 w.innerHTML += ` (${w.attributes.pronunciation.textContent})`;
         });
     </script>
-    <script type="module" src="words.js"></script>
 </html>
