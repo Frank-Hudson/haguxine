@@ -25,7 +25,7 @@ content.innerHTML += webSection(
     [
         p("The speakers of this language primarily reside in non-snowy tundra and forest areas, overshadowed by large mountains and leading out into large plains and cold savannahs."),
         p("Their main source of food is small-medium game animals, small poultry, and limited fruit and veg, primarily in the form of berries and roots."),
-        p(`They often keep either ${a("https://en.wiktionary.org/wiki/cervine", "cervine")}- or canine-like animals that live in the surrounding areas at pets. Occasionally, someone will take a bird as a pet, but usually nothing more flamboyant than that.`),
+        p(`They often keep either ${a("https://en.wiktionary.org/wiki/cervine", "cervine")}- or canine-like animals that live in the surrounding areas as pets. Occasionally, someone will take a bird as a pet, but usually nothing more flamboyant than that.`),
     ].join("\n"),
 );
 
