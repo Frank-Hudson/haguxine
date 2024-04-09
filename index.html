@@ -59,7 +59,9 @@
 
     <body>
         <div id="page" class="row finished">
-            <div class="col-m-3">&nbsp;</div>
+            <div class="col-m-3">
+                <ul id="outline"></ul>
+            </div>
             <div id="main" class="col-6">
                 <h1 id="title">Haguxine</h1>
                 <div id="content">
@@ -88,6 +90,7 @@
         <!-- | Inline -->
         <script>
             const page = document.querySelector("#page");
+            const outline = document.querySelector("#outline");
             const title = document.querySelector("#title");
             const content = document.querySelector("#content");
 
