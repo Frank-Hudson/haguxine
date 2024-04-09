@@ -4,7 +4,7 @@ import { HAGUXINE_TO_ENGLISH, Word } from "./words.js";
 //     `<h${level} ${id ? `id="${id}"` : ""}>${content}</h${level}>`;
 const p = (content, id = "") => `<p ${id ? `id="${id}"` : ""}>${content}</p>`;
 const a = (href, content, id = "") =>
-//     `<a ${id ? `id="${id}"` : ""} href="${href}">${content}</a>`;
+    `<a ${id ? `id="${id}"` : ""} href="${href}">${content}</a>`;
 
 const webSection = function(title, content, level = 2) {
     return `<div class="section">
