@@ -10,7 +10,7 @@ The speakers of this language primarily reside in non-snowy tundra and forest ar
 
 Their main source of food is small-medium game animals, small poultry, and limited fruit and veg, primarily in the form of berries and roots.
 
-They often keep either [cervine](https://en.wiktionary.org/wiki/cervine)- or canine-like animals that live in the surrounding areas at pets. Occasionally, someone will take a bird as a pet, but usually nothing more flamboyant than that.
+They often keep either [cervine](https://en.wiktionary.org/wiki/cervine)- or canine-like animals that live in the surrounding areas as pets. Occasionally, someone will take a bird as a pet, but usually nothing more flamboyant than that.
 
 ## License
 
