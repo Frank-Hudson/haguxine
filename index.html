@@ -274,7 +274,7 @@
             const newWords = content.querySelectorAll(".new-word");
             newWords.forEach((w) => {
                 if (w.attributes.hasOwnProperty("pronunciation"))
-                    w.innerHTML += ` (${w.attributes.pronunciation.textContent})`;
+                    w.innerHTML += ` (/${w.attributes.pronunciation.textContent}/)`;
             });
         </script>
         <!-- / Written code -->

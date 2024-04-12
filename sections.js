@@ -8,7 +8,7 @@ const a = (href, content, id = "") =>
 
 const webSection = function(title, content, level = 2) {
     return `<div class="section">
-                    <h${level} id="${title.split("<em")[0].replace('"', "").trim()}">${title}</h${level}>
+                    <h${level} id="${title.split("<span")[0].replace('"', "").trim()}">${title}</h${level}>
                     <div>${content}</div>
                 </div>`;
 };
@@ -36,7 +36,7 @@ content.innerHTML += webSection(
             webSection(
                 `${haguxine.word} ${
                     haguxine.pronunciation
-                        ? `<em style="font-weight:500;">(${haguxine.pronunciation})</em>`
+                        ? `<span style="font-weight:500;">(/${haguxine.pronunciation}/)</span>`
                         : ""
                 }`,
                 `<p class="translation">translation: ${english.word}</p>
