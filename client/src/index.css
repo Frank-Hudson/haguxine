@@ -63,7 +63,7 @@ h6 {
     float: left;
     width: 100%;
     margin: 10px;
-    list-style: url("/assets/Custom_Bullet_1.svg");
+    list-style: url("./assets/Custom_Bullet_1.svg");
 }
 
 #outline li:hover {
