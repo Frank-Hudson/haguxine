@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Frank-Hudson/haguxine#readme",
   "dependencies": {
+    "create-react-app": "^5.0.1",
     "express": "^4.19.2"
   }
 }
