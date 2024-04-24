@@ -1,0 +1,36 @@
+{
+    "haguxineToEnglish": [
+        {
+            "haguxine": { "word": "kilik", "pronunciation": "kiɭik" },
+            "english": { "word": "fire" }
+        },
+        {
+            "haguxine": { "word": "xun", "pronunciation": "ʃɯn" },
+            "english": { "word": "water" }
+        },
+        {
+            "haguxine": { "word": "vikha", "pronunciation": "viʜa" },
+            "english": { "word": "snow" }
+        },
+        {
+            "haguxine": { "word": "dokan", "pronunciation": "ɖɔkan" },
+            "english": { "word": "wood" }
+        },
+        {
+            "haguxine": { "word": "ika", "pronunciation": "ika" },
+            "english": { "word": "sweet" }
+        },
+        {
+            "haguxine": { "word": "dokanika", "pronunciation": "ɖɔkanika" },
+            "english": { "word": "berry" }
+        },
+        {
+            "haguxine": { "word": "xkuwa", "pronunciation": "ʃkɯwa" },
+            "english": { "word": "juice" }
+        },
+        {
+            "haguxine": { "word": "xkudokna", "pronunciation": "ʃkɯɖɔkna" },
+            "english": { "word": "berry juice" }
+        }
+    ]
+}
