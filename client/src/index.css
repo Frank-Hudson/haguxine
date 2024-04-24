@@ -117,7 +117,7 @@ h1#title {
     text-decoration: underline;
 }
 
-#popup {
+.popup {
     color: #fefff7e9;
     background-color: #0f539bd8;
     border-radius: 4px;
@@ -131,10 +131,14 @@ h1#title {
     z-index: 1;
 }
 
-#popup.shown {
+.popup.shown {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
+}
+
+.popup.warning {
+    background-color: #ff6200d8;
 }
 
 @-webkit-keyframes fadeIn {

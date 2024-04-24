@@ -9,6 +9,8 @@ import IconAnchor from "./IconAnchor.js";
 
 import "./index.css";
 import Section from "./Section.js";
+import { topbarShareClick } from "./events.js";
+import Popup from "./Popup.js";
 
 function App(properties) {
     const [data, setData] = React.useState(null);
@@ -40,6 +42,9 @@ function App(properties) {
                         fasize="2xl"
                         title="Share (copy link)"
                         id="topbar-share"
+                        onClick={() =>
+                            topbarShareClick(document.getElementById("popup"))
+                        }
                     />
                 </p>
             </FullCol>
@@ -125,6 +130,8 @@ function App(properties) {
                     </a>
                 </p>
             </FullCol>
+
+            <Popup id="popup"></Popup>
         </>
     );
 }
