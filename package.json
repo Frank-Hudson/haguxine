@@ -1,0 +1,19 @@
+{
+  "name": "haguxine",
+  "version": "0.2.0",
+  "description": "A website for my made up (constructed) language, or \"conlang\".",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frank-Hudson/haguxine.git"
+  },
+  "author": "Frank Hudson",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Frank-Hudson/haguxine/issues"
+  },
+  "homepage": "https://github.com/Frank-Hudson/haguxine#readme"
+}
