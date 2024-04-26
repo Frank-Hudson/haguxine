@@ -1,7 +1,8 @@
 const express = require("express");
 const fs = require("fs");
 
-const PORT = process.env.PORT || 3001;
+// const PORT = process.env.PORT || 6001;
+const PORT = 6001;
 const app = express();
 
 const DATA = {
