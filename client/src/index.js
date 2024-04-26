@@ -6,21 +6,23 @@ import reportWebVitals from "./reportWebVitals";
 import Col, { FullCol } from "./Col.js";
 import Row from "./Row.js";
 import IconAnchor from "./IconAnchor.js";
+import Section from "./Section.js";
+import WordSection from "./WordSection.js";
+import Popup from "./Popup.js";
 
 import "./index.css";
-import Section from "./Section.js";
 import { topbarShareClick } from "./events.js";
-import Popup from "./Popup.js";
 
 function App(properties) {
     const [data, setData] = React.useState(null);
+
     React.useEffect(() => {
         fetch("/api")
             .then((response) => response.json())
-            .then((data) => setData(data.message));
+            .then((data) => setData(data));
     }, []);
 
-    console.log(data);
+    console.log(!data ? "Loading data..." : data);
 
     return (
         <>
@@ -102,11 +104,22 @@ function App(properties) {
                                 </p>
                             </div>
                         </Section>
-                    </div>
 
-                    <pre>
-                        <code>{JSON.stringify(data)}</code>
-                    </pre>
+                        <Section title="Words">
+                            {!data ? <p>{"Loading data..."}</p> : data.words.haguxineToEnglish.map(
+                                ({ haguxine, english }) => (
+                                    <WordSection
+                                        title={haguxine.word}
+                                        pronunciation={haguxine.pronunciation}
+                                        translation={english.word}
+                                        key={haguxine.word}
+                                    />
+                                )
+                            )}
+                        </Section>
+
+                        <pre><code>{!data ? "Loading..." : JSON.stringify(data)}</code></pre>
+                    </div>
                 </Col>
                 <Col sizes="3,12">&nbsp;</Col>
             </Row>
