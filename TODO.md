@@ -8,5 +8,5 @@
 - [x] Copy/migrate styles and assets from original location to client
 - [x] Add world building section to client
 - [x] Implement copy link and popup box functionality for client
-- [ ] Implement word list for client
+- [x] Implement word list for client
 - [ ] Implement glossary for client
