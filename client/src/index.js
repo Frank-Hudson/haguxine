@@ -106,19 +106,25 @@ function App(properties) {
                         </Section>
 
                         <Section title="Words">
-                            {!data ? <p>{"Loading data..."}</p> : data.words.haguxineToEnglish.map(
-                                ({ haguxine, english }) => (
-                                    <WordSection
-                                        title={haguxine.word}
-                                        pronunciation={haguxine.pronunciation}
-                                        translation={english.word}
-                                        key={haguxine.word}
-                                    />
+                            {!data ? (
+                                <p>{"Loading data..."}</p>
+                            ) : (
+                                data.words.haguxineToEnglish.map(
+                                    ({ haguxine, english }) => (
+                                        <WordSection
+                                            title={haguxine.word}
+                                            pronunciation={
+                                                haguxine.pronunciation
+                                            }
+                                            translation={english.word}
+                                            key={haguxine.word}
+                                        />
+                                    )
                                 )
                             )}
                         </Section>
 
-                        <pre><code>{!data ? "Loading..." : JSON.stringify(data)}</code></pre>
+                        {/* <div><pre><code>{!data ? "Loading..." : JSON.stringify(data)}</code></pre></div> */}
                     </div>
                 </Col>
                 <Col sizes="3,12">&nbsp;</Col>
