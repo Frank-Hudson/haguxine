@@ -94,11 +94,32 @@ h1#title {
     font-weight: 425;
 }
 
+.word-section h1,
+.word-section h2,
+.word-section h3,
+.word-section h4,
+.word-section h5,
+.word-section h6 {
+    margin-bottom: 0.5em;
+}
+.pronunciation {
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
 .translation {
     font-style: oblique;
     font-weight: 300;
     margin: auto;
     text-align: center;
+}
+.definition {
+    --vertical-margins: 20px;
+    margin: auto;
+    margin-top: var(--vertical-margins);
+    margin-bottom: var(--vertical-margins);
+    text-align: center;
+    justify-content: center;
 }
 
 #bottombar {
