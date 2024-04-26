@@ -4,7 +4,7 @@ export default function WordSection(properties) {
     delete filteredProperties.id;
     return (
         <div className={"word-section " + properties.className} id={properties.title} {...filteredProperties}>
-            <h2>{properties.word}</h2>
+            <h2>{properties.title}</h2>
             <p className="pronunciation">{`/${properties.pronunciation}/`}</p>
             <p className="translation">{properties.translation}</p>
             <p className="definition">
